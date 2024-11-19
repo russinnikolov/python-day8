@@ -3,11 +3,12 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 
 def ceaser(original_text, shift_number, operation):
     output = ""
+
+    if operation == 'decode':
+        shift_number *= -1
+
     for char in original_text:
         if char in alphabet:
-            if operation == 'decode':
-                shift_number *= -1
-
             new_position = alphabet.index(char) + shift_number
             new_position %= len(alphabet)
             output += alphabet[new_position]
