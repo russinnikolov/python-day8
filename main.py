@@ -18,7 +18,7 @@ def ceaser(original_text, shift_number, operation):
     print(f"The {word} text is {output}")
 
 continue_program = "yes"
-while continue_program == "yes":
+while continue_program != "no":
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
     if (direction not in ["encode", "decode"]):
         print("Invalid input")
